@@ -1,0 +1,434 @@
+/* imports */
+@import 'variables';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-image: url('/image/imageS1.png');
+    background-size: auto 100%;
+    background-position: top;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-color: $bc;
+    position: relative;
+    z-index: 1;
+    margin-top: 0px;
+}
+
+.perfil {
+    background-image: url('/image/perfil.png');
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 90px;
+    width: 100px;
+    height: 100px;
+    z-index: 2; /* hace que la imagen se sobre ponga sobre cualquiera */
+    box-shadow: 20px 10px 30px black;
+}
+
+h1 {
+    font-family: $ff;
+    font-size: 80px;
+    color: $tc;
+    font-weight: 400;
+    background-color:$bc;
+    margin-top: 0%;
+    position: relative;
+    z-index: 3;
+}
+
+.intro {
+    font-family: $ff;
+    font-size: 40px;
+    color: $tc;
+    background-color: $bc;
+    margin-top: -1%;
+    text-align: center;
+}
+
+.video {
+    background-image: url('/image/video.png');
+    background-size: cover;
+    background-position: center;
+    width: 20%;
+    height: 500px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    background-repeat: no-repeat;
+}
+
+a[href="html/maps.html"],
+a[href="html/contact.html"],
+a[href="html/productos.html"],
+a[href="html/us.html"] {
+    font-family: $ff;
+    font-size: 30px;
+    color: $tc;
+    background-color: $bc;
+    text-align: center;
+    display: block;
+    padding: 10px;
+    margin-left: -40px;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+    &:hover {
+        transform: scale(1.1); /* Escala el enlace al 110% en el hover */
+        background-color: $bc; /* Reduce el brillo del color de fondo en el hover */
+        color: lighten($tc, 10%); /* Aclara el color del texto en el hover */
+    }
+}
+
+.derechos {
+    font-family: $ff;
+    font-size: 15px;
+    color: $tc;
+    background-color: $bc;
+    text-align: center;
+    display: block;
+    padding: 10px;
+}
+
+.iframe-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; /* Centra el contenedor horizontalmente */
+}
+
+.iframe {
+    width: 100%;
+    height: 400px;
+    display: block;
+}
+.textomapa {
+    font-family: $ff;
+    font-size: 40px;
+    color: $tc;
+    background-color: $bc;
+    margin-top: 0px;
+    text-align: center;
+}
+
+select {
+    width: 50%;
+    padding: 10px;
+    font-size: 30px;
+    margin: 0 auto;
+    display: block;
+    font-family: $ff;
+    color: $tc;
+    background-color: $bc;
+}
+
+.nos,
+.otros {
+    font-family: $ff;
+    font-size: 40px;
+    color: $tc;
+    background-color: $bc;
+    margin-top: 0px;
+    text-align: right;
+
+    &.otros {
+        text-align: left;
+    }
+}
+
+/* PERSONALIZARCION boton dropdown */
+.dropdown-toggle {
+    position: relative;
+    transition: transform 0.5s ease; /* Transición suave para el efecto de escala */
+}
+
+.dropdown-toggle:hover {
+    transform: scale(1.1); /* Escala el texto al 110% en el hover */
+    z-index: 1; /* Asegura que el texto esté por encima de otros elementos */
+}
+.dropdown-toggle::after {
+    transition: transform 0.5s ease; /* Agrega una transición suave al icono de flecha */
+}
+
+.dropdown-toggle:hover::after {
+    transform: rotate(180deg); /* Hace que la flecha rote al pasar el cursor sobre el botón */
+}
+/* personalizacion boton hamburguesa */
+.navbar-toggler-icon {
+    transition: transform 0.3s ease; /* Agrega una transición suave al icono */
+}
+
+.navbar-toggler-icon:hover {
+    transform: scale(1.2); /* Hace que el icono se agrande al pasar el cursor sobre él */
+}
+/* navbar customization */
+.bg-color-custom {
+    font-family: $ff;
+    background-color: $bc !important;
+    color: $tc;
+    margin-top: auto;
+}
+
+/* menu dropdown productos desde index */
+.dropdown-menu a[href="html/productos.html"],
+.dropdown-menu a[href="productos.html"],
+.dropdown-menu a[href="html/maps.html"],
+.dropdown-menu a[href="maps.html"],
+.dropdown-menu a[href="html/contact.html"],
+.dropdown-menu a[href="contact.html"],
+.dropdown-menu a[href="html/us.html"],
+.dropdown-menu a[href="us.html"]
+{
+    font-family: $ff;
+    color: inherit;
+    background-color: $bc;
+    text-align: left;
+    display: block;
+    padding: 0.5rem 1rem;
+    margin-left: auto;
+    margin-top: -8px;
+    font-size: 30px;
+}
+.dropdown-menu a.dropdown-item:hover 
+{
+    transition: transform 0.3s;
+    transform: scale(1.1);
+    background-color: $bc;
+    color: white;
+}
+
+
+/* home */
+.navbar-nav .nav-item .nav-link.active {
+    font-family: $ff;
+    font-size: 30px;
+    font-weight: bold;
+    color: $tc;
+    background-color: $bc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+/* formulario contacto */
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Ajusta la altura según necesites */
+    font-family: $ff;
+    color: $tc;
+    font-size: 20px;
+    background-color: $bc;
+
+    input[type="text"],
+    input[type="password"] {
+        display: block; /* Mostrar los campos de nombre y contraseña uno debajo del otro */
+        margin-bottom: 10px; /* Espacio entre los campos */
+    }
+    input[type="submit"] {
+        background-color: #fff; /* Cambia el color de fondo del botón enviar */
+        color: #6DA4A3; /* Cambia el color del texto del botón enviar */
+        border: none; /* Elimina el borde del botón enviar */
+        padding: 10px 20px; /* Ajusta el relleno dentro del botón enviar */
+        cursor: pointer; /* Cambia el cursor al pasar sobre el botón enviar */
+        border-radius: 5px; /* Añade esquinas redondeadas al botón enviar */
+    }
+    input[type="submit"]:hover {
+        background-color: $bc; /* Cambia el color de fondo del botón enviar en el hover */
+        color: #fff; /* Cambia el color del texto del botón enviar en el hover */
+        transform: scale(1.1); /* Escala el enlace al 110% en el hover */
+        background-color: $bc; /* Reduce el brillo del color de fondo en el hover */
+        color: #fff; /* Aclara el color del texto en el hover */
+
+    }
+}
+
+/* fish&co */
+.navbar-brand {
+    font-family: $ff;
+    font-size: 35px;
+    font-weight: bold;
+    color: $tc;
+    text-decoration: none;
+    margin: auto;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+/* Estilo para el texto del elemento Dropdown en el navbar */
+.nav-item.dropdown .nav-link {
+    font-family: $ff;
+    font-size: 35px;
+    color: $tc;
+    margin: auto;
+    margin-left: auto;
+    background-color: $bc;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-left: 25px;
+    transition: background-color 0.3s ease;
+    
+}
+
+/* hacer que los links tengan un color despues de presionar */
+.navbar-nav .nav-item .nav-link.active {
+    color: $tc;
+}
+
+/* Estilo para el enlace de marca sin apariencia de botón y sin hover */
+.navbar-brand {
+    color: inherit;
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0;
+    text-decoration: none;
+}
+
+/* Evitar el efecto de hover en el enlace de marca */
+.navbar-brand:hover {
+    color: inherit !important;
+    background-color: transparent !important;
+}
+
+/* imagenes de productos */
+.pagina-productos {
+    background-color: $bc;
+}
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px; /* Espacio entre las imágenes */
+    max-width: 800px; /* Ajustar tamaño máximo de las imágenes */
+    height: auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Mantener la relación de aspecto */
+    }
+}
+
+/* configuracion homepage */
+.pagina-home {
+    background-color: $bc;
+}
+
+/* menu de productos de la pagina y efecto hover*/
+.select-prod select{
+    padding: 10px;
+    font-size: 24px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #418793;
+    width: 400px;
+    transition: background-color 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: $bc;
+        cursor: pointer;
+    }
+    option:hover {
+        font-size: 20px;
+        background-color: #f9f9f9;
+        transform: scale(1.2); /* Aumenta el tamaño del texto */
+    }
+}
+
+@media (max-width: 600px) {
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%; /* Ajustar al ancho completo */
+        margin: 0 auto; /* Centrar el contenedor */
+    }
+
+    .perfil {
+        position: fixed; /* Fija la posición de la imagen */
+        right: 0; /* Coloca la imagen en la esquina derecha */
+        top: 0; /* Coloca la imagen en la esquina superior */
+        margin: 5px; /* Añade un pequeño margen */
+    }
+
+    .video {
+        width: 70%; /* Ancho del video para 600px */
+        height: auto; /* Altura automática para mantener la proporción */
+        margin-left: 0; /* Centrar el video horizontalmente */
+        margin-right: -50px; /* Centrar el video horizontalmente */
+    }
+
+    .formulario {
+        font-size: 25px; /* Reducir el tamaño de fuente del formulario */
+        max-width: 350%; /* Hacer que el formulario ocupe todo el ancho disponible en pantallas pequeñas */
+        padding: 0 20px; /* Agregar un poco de espacio a los lados del formulario en pantallas pequeñas */
+    }
+    .navbar {
+        flex-direction: column; /* Cambia la dirección a columna */
+        align-items: stretch; /* Estira los elementos para ocupar todo el ancho */
+    }
+
+    /* Anidamos las reglas para simplificar */
+    .navbar-brand { order: 2; }
+    .navbar-toggler { order: 1; }
+    .collapse { order: 3; }
+}
+
+/* mq desktop*/
+@media (max-width: 1024px) {
+    /* galeria de productos */
+    .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto; /* Autoajustar tamaño de las filas */
+        justify-content: center;
+        margin: 0 auto;
+    }
+    /* imagen video de pagina principal */
+    .video {
+        width: 50%; /* Ancho del video para 1024px */
+        height: auto; /* Altura automática para mantener la proporción */
+        margin-left: auto; /* Centrar el video horizontalmente */
+        margin-right: auto; /* Centrar el video horizontalmente */
+    }
+    /* formulario de contacto */
+    .formulario {
+        font-size: 18px; /* Aumentar el tamaño de fuente del formulario */
+    }
+    /* imagen de perfil */
+    .perfil {
+        width: 80px; /* Reducir el tamaño */
+        height: 80px;
+        top: 10px; /* Ajustar la posición desde la parte superior */
+        right: 10px; /* Ajustar la posición desde la derecha */
+        box-shadow: none; /* Eliminar la sombra */
+        z-index: 1; /* Asegurar que esté detrás de otros elementos */
+    }
+    /* mapa de pagina maps */
+    .iframe-container {
+        width: 90%; /* Reduce el ancho del contenedor para pantallas de 1024px o menos */
+    }
+
+    /* menu navbar */
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+
+        .navbar-brand {
+            order: 2;
+        }
+
+        .navbar-toggler {
+            order: 1;
+        }
+
+        .collapse {
+            order: 3;
+        }
+    }
+}
