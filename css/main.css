@@ -69,7 +69,7 @@ h1 {
   background-repeat: no-repeat;
 }
 
-a[href="html/maps.html"],
+a[href=".html/maps.html"],
 a[href="html/contact.html"],
 a[href="html/productos.html"],
 a[href="html/us.html"] {
@@ -83,7 +83,7 @@ a[href="html/us.html"] {
   margin-left: -40px;
   transition: transform 0.2s, background-color 0.2s, color 0.2s;
 }
-a[href="html/maps.html"]:hover,
+a[href=".html/maps.html"]:hover,
 a[href="html/contact.html"]:hover,
 a[href="html/productos.html"]:hover,
 a[href="html/us.html"]:hover {
@@ -103,7 +103,7 @@ a[href="html/us.html"]:hover {
 }
 
 .iframe-container {
-  width: 80%;
+  width: 30%;
   margin-left: auto;
   margin-right: auto; /* Centra el contenedor horizontalmente */
 }
@@ -315,6 +315,7 @@ select {
   height: auto;
   grid-template-rows: 1fr 1fr 1fr;
   justify-content: center;
+  margin: 0 auto;
 }
 .contenedor img {
   width: 100%;
@@ -360,7 +361,7 @@ select {
     margin: 5px; /* Añade un pequeño margen */
   }
   .video {
-    width: 70%; /* Ancho del video para 600px */
+    width: 50%; /* Ancho del video para 600px */
     height: auto; /* Altura automática para mantener la proporción */
     margin-left: 0; /* Centrar el video horizontalmente */
     margin-right: -50px; /* Centrar el video horizontalmente */
@@ -386,7 +387,7 @@ select {
   }
 }
 /* mq desktop*/
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
   /* galeria de productos */
   .contenedor {
     grid-template-columns: repeat(3, 1fr);
