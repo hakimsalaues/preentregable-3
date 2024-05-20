@@ -69,7 +69,7 @@ h1 {
   background-repeat: no-repeat;
 }
 
-a[href=".html/maps.html"],
+a[href="html/maps.html"],
 a[href="html/contact.html"],
 a[href="html/productos.html"],
 a[href="html/us.html"] {
@@ -83,7 +83,7 @@ a[href="html/us.html"] {
   margin-left: -40px;
   transition: transform 0.2s, background-color 0.2s, color 0.2s;
 }
-a[href=".html/maps.html"]:hover,
+a[href="html/maps.html"]:hover,
 a[href="html/contact.html"]:hover,
 a[href="html/productos.html"]:hover,
 a[href="html/us.html"]:hover {
