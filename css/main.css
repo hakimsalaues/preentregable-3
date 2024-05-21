@@ -69,10 +69,7 @@ h1 {
   background-repeat: no-repeat;
 }
 
-a[href="html/maps.html"],
-a[href="html/contact.html"],
-a[href="html/productos.html"],
-a[href="html/us.html"] {
+.links {
   font-family: "Madimi One", sans-serif;
   font-size: 30px;
   color: #E6E6DD;
@@ -83,10 +80,7 @@ a[href="html/us.html"] {
   margin-left: -40px;
   transition: transform 0.2s, background-color 0.2s, color 0.2s;
 }
-a[href="html/maps.html"]:hover,
-a[href="html/contact.html"]:hover,
-a[href="html/productos.html"]:hover,
-a[href="html/us.html"]:hover {
+.links:hover {
   transform: scale(1.1); /* Escala el enlace al 110% en el hover */
   background-color: #6DA4A3; /* Reduce el brillo del color de fondo en el hover */
   color: #fcfcfa; /* Aclara el color del texto en el hover */

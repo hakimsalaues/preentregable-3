@@ -66,10 +66,7 @@ h1 {
     background-repeat: no-repeat;
 }
 
-a[href="html/maps.html"],
-a[href="html/contact.html"],
-a[href="html/productos.html"],
-a[href="html/us.html"] {
+.links {
     font-family: $ff;
     font-size: 30px;
     color: $tc;
